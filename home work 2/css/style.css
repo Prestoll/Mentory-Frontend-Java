@@ -1,0 +1,86 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:16px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+/* h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;} */
+/*--------------------*/
+ 
+body{
+    font-family: Arial, sans-serif;
+    background:#f6f7fb;
+    color:#111;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+}
+ 
+.container{
+    width:100%;
+    max-width:520px;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(20,20,40,0.08);
+}
+ 
+form label{
+    display:block;
+    margin-bottom:12px;
+    font-size:14px;
+}
+ 
+h1{
+    margin-bottom: 20px;
+    text-align: center;
+}
+ 
+input, select, textarea{
+    width:100%;
+    padding:8px 10px;
+    margin-top:6px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:14px;
+}
+ 
+textarea{min-height:90px; resize:vertical}
+button{
+    margin-top:10px;
+    padding:10px 14px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#2b6df6;
+    color:#fff;
+    font-weight:600;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 12px rgba(43,109,246,0.4)
+}
+ 
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 22px rgba(43,109,246,0.8);
+    background:#3b7bff;
+}
+ 
+button:active{
+    transform: scale(0.97);
+    box-shadow: 0 0 10px rgba(43,109,246,0.5);
+}
+ 
+.helper {
+    font-size:13px;
+    color:#666;
+    margin-top:12px
+}
