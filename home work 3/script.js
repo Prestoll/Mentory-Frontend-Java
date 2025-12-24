@@ -31,7 +31,13 @@ const modalContents = document.querySelectorAll('.model_content');
 //   });
 // });
 
-//второй вариант
+// modalContents.forEach((content) =>{
+//   content.addEventListener('click', (event) => {
+//     event.stopPropagation();
+//   });
+// });
+
+//рабочий вариант
 modalWindows.forEach((modal) =>{
   modal.addEventListener('click' , (event) => {
     if (event.target === modal){
@@ -40,11 +46,7 @@ modalWindows.forEach((modal) =>{
   });
 });
 
-// modalContents.forEach((content) =>{
-//   content.addEventListener('click', (event) => {
-//     event.stopPropagation();
-//   });
-// });
+
 
 
 
@@ -80,28 +82,34 @@ const accordions = document.querySelectorAll('.accordion__container');
 function toggleAccordion(event) {
   const accordionContainer = event.target.closest('[accordion-type]') ?? event.target.closest('.accordion__container');
   const accordionType = event.target.closest('[accordion-type]')?.getAttribute('accordion-type') ?? 'multi';
-  const isAccordionHeader = event.target.classList.contains('accordion__header');
+  // const isAccordionHeader = event.target.classList.contains('accordion__header');
+  const header = event.target.closest('.accordion__header');
+  if (!header) return;
 
 
-  if (isAccordionHeader) {
-    const parentElement = event.target.closest('[accordion-id]');
+  // if (isAccordionHeader) {
+    const parentElement = header.closest('[accordion-id]');
     const accordionState = parentElement.getAttribute('accordion-state');
 
     if (accordionType === 'single') {
-      const accordions = accordionContainer.querySelectorAll('[accordion-id]');
-      accordions.forEach((item) => {
+      const items = accordionContainer.querySelectorAll('[accordion-id]');
+      items.forEach((item) => {
         item.setAttribute('accordion-state', 'closed')
-      })
+      });
     }
 
-    if (accordionState === 'closed') {
-      parentElement.setAttribute('accordion-state', 'open')
-    } else {
-      parentElement.setAttribute('accordion-state', 'closed')
-    }
+    // if (accordionState === 'closed') {
+    //   parentElement.setAttribute('accordion-state', 'open')
+    // } else {
+    //   parentElement.setAttribute('accordion-state', 'closed')
+    // }
+    //тоже самое но по короче
+    parentElement.setAttribute(
+    'accordion-state',
+    accordionState === 'closed' ? 'open' : 'closed'
+  );
   }
-}
 
 accordions.forEach((accordion) => {
   accordion.addEventListener('click', toggleAccordion)
-})
+});
