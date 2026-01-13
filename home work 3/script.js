@@ -19,7 +19,7 @@
 
 // Модалки продвинутые
 const openModalButtons = document.querySelectorAll('[data-modal-action="open-modal"]');
-// const closeModalButtons = document.querySelectorAll('[data-modal-action="close-modal"]');
+const closeModalButtons = document.querySelectorAll('[data-modal-action="close-modal"]');
 const modalWindows = document.querySelectorAll('[data-modal-action="modal"]');
 const modalContents = document.querySelectorAll('.model_content');
 
@@ -54,9 +54,9 @@ openModalButtons.forEach((btn) => {
   btn.addEventListener('click', openModal);
 });
 
-// closeModalButtons.forEach((btn) => {
-//   btn.addEventListener('click', closeModal);
-// });
+closeModalButtons.forEach((btn) => {
+  btn.addEventListener('click', closeModal);
+});
 
 
 function openModal(event) {
