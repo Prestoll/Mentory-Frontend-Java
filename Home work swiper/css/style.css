@@ -32,20 +32,10 @@ body {
   font-size: 48px;
 }
 
-.swiper {
-  max-width: 1440px;
-  max-height: 990px;
-  margin: 0 auto;
-}
-
-.swiper-slide {
-  height: auto;
-}
-
 .card {
   background: #ffffff;
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 10px 30px rgba(0,0,0,0.06);
   height: 100%;
   position: relative;
@@ -57,7 +47,8 @@ body {
   gap: 12px;
   margin-bottom: 16px;
   background-color: #f3f3f3;
-  padding: 25px; 20px; 
+  padding: 25px 20px; 
+  border-radius: 16px 16px 0 0;
 }
 
 .card-header h4 {
@@ -93,7 +84,7 @@ body {
   font-size: 14px;
   color: #f4c150;
 
-  z-index: 2;
+  z-index: 3;
 }
 
 .card p {
@@ -112,6 +103,28 @@ body {
   line-height: 1.6;
   color: #444;
   text-align: center;
+}
+
+.swiper {
+  max-width: 1440px;
+  max-height: 990px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+  overflow: visible !important;
+}
+
+.swiper-wrapper {
+  overflow: visible !important;
+}
+
+.swiper-slide {
+  height: auto;
+
+}
+
+.swiper-pagination {
+  bottom: -60px !important;
+  z-index: 2;
 }
 
 .swiper-pagination-bullet {
