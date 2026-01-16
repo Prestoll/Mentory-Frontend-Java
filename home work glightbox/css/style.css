@@ -1,0 +1,81 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:16px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+/* h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;} */
+/*--------------------*/
+
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #ffffff;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: left;
+  font-size: 1 rem;
+  margin: 40px 0 60px;
+  color: #0a0a0a;;
+}
+
+.columns {
+  display: flex;
+  gap: 16px;                /* расстояние между столбцами */
+  flex-wrap: wrap;          /* на узких экранах столбцы пойдут вниз */
+  justify-content: center;
+}
+
+.column {
+  flex: 1 1 280px;          /* минимальная ширина столбца ~280px */
+  max-width: 400px;         /* максимальная ширина одного столбца */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;                /* расстояние между картинками внутри столбца */
+}
+
+.grid-item {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.grid-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+}
+
+.grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1100px) {
+  .column { max-width: 45%; }
+}
+
+@media (max-width: 700px) {
+  .column { flex: 1 1 100%; max-width: 100%; }
+}
