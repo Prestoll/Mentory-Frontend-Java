@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Сладкий Бургер</title>
 </head>
 <body>
-    <header class="header">
+    <header class="header" data-aos="fade-down">
         <div class="container">
         <img src="./images/icons/logo.png" alt="" class="logo">
         <nav class="nav">
@@ -24,7 +25,7 @@
     </header>
 
     <main class="main">
-        <section class="welcome">
+        <section class="welcome" data-aos="fade-up" >
           <div class="container">
             <div class="welcome_container2">
             <h4 class="welcome_subtitle">FAST FOOD BURGERS</h4>
@@ -34,9 +35,9 @@
             </div>
             </div>
         </section>
-        <section class="food_list">
+        <section class="food_list" data-aos="fade-up">
             <div class="container">
-                <div class="food_list_card">
+                <div class="food_list_card" data-aos="zoom-in">
                 <img src=".//images/food-list-1.jpg" alt="" class="food_list_img">
                 <div class="food_text_container">
                     <h4 class="food_list_title">Chicken Paella  </h4>
@@ -67,7 +68,7 @@
                 </div>
             </div>
         </section>
-        <section class="order">
+        <section class="order" data-aos="fade-right">
             <div class="container">
                 <img src="./images/burger.png" alt="" class="order_burger">
             <div class="order_text_container">
@@ -79,9 +80,9 @@
             </div>
             </div>
         </section>
-        <section class="product">
+        <section class="product" data-aos="fade-up">
             <div class="container">
-                <div class="product_card card_queen">
+                <div class="product_card card_queen" data-aos="fade-left">
                     <h4 class="product_title">Dairy Queen</h4>
                     <p class="product_text">Dairy Queen is one of the biggest fast-food.</p>
                     <span class="product_price">$4</span>
@@ -111,7 +112,7 @@
                 </div>
             </div>
         </section>
-        <section class="feedback">
+        <section class="feedback" data-aos="fade-up">
             <div class="container">
                 <img src="./images/feedback.png" alt="" class="img_feedback">
                 <blockquote class="feedback_text_container">
@@ -121,7 +122,7 @@
                 </blockquote>
             </div>
         </section>
-        <div class="download">
+        <div class="download" data-aos="zoom-in">
             <div class="container">
                 <p class="download_text">Download Our Menu</p>
                 <a href="./images/burger.png" class="btn" download>DOWNLOAD</a>
@@ -129,7 +130,7 @@
         </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
         <div class="container">
             <div class="footer_contacts">
                 <img src="./images/icons/logo.png" alt="Логотип" class="footer_logo">
@@ -172,6 +173,8 @@
         </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
 <!-- 
