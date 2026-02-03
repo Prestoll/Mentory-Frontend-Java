@@ -267,6 +267,11 @@ body {
     color: var(--text-black-900);
 }
 
+/* .home .container {
+    max-width: 1400px;
+    margin: 0 auto;
+} */
+
 
 .home .home-info {
     flex: 0 0 60%;
@@ -303,11 +308,11 @@ h3.my-profession {
 .home .home-img {
     flex: 0 0 40%;
     max-width: 40%;
-    text-align: center;
+    /* text-align: center; */
     position: relative;
 }
 
-.home-img::after {
+/* .home-img::after {
     content: '';
     position: absolute;
     height: 60px;
@@ -327,15 +332,16 @@ h3.my-profession {
     border-left: 10px solid var(--skin-color);
     left: -40px;
     top: -60px;
-}
+} */
 
 .home .home-img img {
     height: auto;
     max-height: 450px;
     width: auto;
-    max-width: 100%;
+    max-width: 70%;
     display: block;
-    margin: 0 auto;
+    margin-left: 0;
+    /* margin: 0 auto; */
     border-radius: 5px;
 }
 
@@ -753,14 +759,58 @@ h3.my-profession {
 }
 
 @media (max-width:1000px) {
+    .portfolio .portfolio-item,
     .about .about-content .personal-info .info-item {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-      /* .about .about-content .skills {
+    .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    }
+}
+
+@media (max-width:900px) {
+    .service .service-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+    }
+    .home .home-img {
+        display: none;
+    }
+    .about .about-content .education,
+    .about .about-content .experience,
+    .home .home-info {
         flex: 0 0 100%;
         max-width: 100%;
-        margin-top: 40px;
-    } */
+    }
+}
+
+@media (max-width:800px) {
+    .contact .contact-form .col-6,
+    .service .service-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:650px) {
+    .contact .contact-info-item,
+    .service .service-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .about .about-content .personal-info .buttons{
+        display: flex;
+        flex-direction:row;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+       .about .about-content .personal-info .buttons .btn {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
 }
