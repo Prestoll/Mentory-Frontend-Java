@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/color-1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Style Switcher -->
     <link rel="stylesheet" href="./css/style-switcher.css">
+    <link rel="stylesheet" href="./css/color-1.css" class="alternate-style" title="color-1" disabled>
+    <link rel="stylesheet" href="./css/color-2.css" class="alternate-style" title="color-2" disabled>
+    <link rel="stylesheet" href="./css/color-3.css" class="alternate-style" title="color-3">
+    <link rel="stylesheet" href="./css/color-4.css" class="alternate-style" title="color-4" disabled>
+    <link rel="stylesheet" href="./css/color-5.css" class="alternate-style" title="color-5" disabled>
     <title>Home work1</title>
 </head>
 <body>
@@ -444,14 +449,15 @@
     </div>
     <h4>Theme Colors</h4>
     <div class="colors">
-        <span class="color1" onclick="setActiveStyle('color-1')"></span>
-        <span class="color2" onclick="setActiveStyle('color-2')"></span>
-        <span class="color3" onclick="setActiveStyle('color-3')"></span>
-        <span class="color4" onclick="setActiveStyle('color-4')"></span>
-        <span class="color5" onclick="setActiveStyle('color-5')"></span>
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
     </div>
  </div>
 <!-- ==== Style Switcher End ==== -->
 <script src="./js/main.js"></script>
+<script src="./js/style-switcher.js"></script>
 </body>
 </html>
