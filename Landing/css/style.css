@@ -46,17 +46,47 @@ body {
     display: block;
     padding: 60px 70px;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top:0;
+    right: 0;
+    bottom:0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+.section.back-section {
+    z-index: 1;
+}
+
+.section.active {
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+
+@keyframes slideSection {
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
 }
 
 .hidden {
     display: none !important;
 }
 
-.main-content {
+/* .main-content {
     margin-left: 270px;
     max-width: calc(100% - 270px);
     box-sizing: border-box;
-}
+} */
 
 .padd-15 {
     padding-left: 15px;
@@ -211,6 +241,7 @@ body {
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
 }
 
 .aside .nav-toggler span {
@@ -219,6 +250,10 @@ body {
     background: var(--skin-color);
     display: inline-block;
     position: relative;
+}
+
+.aside .nav-toggler.open span {
+    background-color: transparent;
 }
 
 .aside .nav-toggler span::before {
@@ -231,6 +266,11 @@ body {
     left: 0;
 }
 
+.aside .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
 .aside .nav-toggler span::after{
     content: '';
     height: 2px;
@@ -239,6 +279,11 @@ body {
     position: absolute;
     top: 6px;
     left: 0;
+}
+
+.aside .nav-toggler.open span::after {
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .aside .nav {
@@ -350,7 +395,13 @@ h3.my-profession {
     display: block;
     margin-left: 0;
     /* margin: 0 auto; */
-    border-radius: 5px;
+    border-radius: 25px;
+    transition: 0.3s;
+    box-shadow: 0 0 30px var(--skin-color);
+}
+
+.home-img img:hover {
+    transform: translateY(-5px);
 }
 
 /* About */
@@ -407,12 +458,23 @@ h3.my-profession {
     display: inline-block;
 }
 
+.about .about-content .personal-info .info-item p span a {
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.about .about-content .personal-info .info-item p span a:hover {
+    color: var(--skin-color);
+}
+
 .about .about-content .personal-info .buttons {
     margin-top: 30px;
 }
 
 .about .about-content .personal-info .info-item .buttons .btn {
-    margin-right: 15px;
     margin-top: 10px;
 }
 
@@ -696,6 +758,18 @@ h3.my-profession {
     font-weight: 400;
 }
 
+.contact .contact-info-item a {
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+
+.contact .contact-info-item a:hover {
+    color: var(--skin-color);
+}
+
 .contact .contact-form{
     flex: 0 0 100%;
     max-width: 100%;
@@ -754,16 +828,38 @@ h3.my-profession {
 }
 
 @media (max-width:1180px){
+    .section .container {
+        padding-top: 70px;
+    }
+
     .aside {
         left: -270px;
     }
+
+    .aside.open{
+        left: 0;
+    }
+
+    .aside .nav-toggler{
+        display: flex;
+        left: 30px;
+    }
+
+    .aside .nav-toggler.open {
+        left: 300px;
+    }
+
     .main-content {
         margin: 0;
     }
+    
     .section {
-
-        margin-right: -270px;
+        left: 0;
     }
+}
+
+.section.open {
+    left: 270px;
 }
 
 @media (max-width:1000px) {
