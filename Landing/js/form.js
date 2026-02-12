@@ -44,7 +44,7 @@ form.addEventListener("submit", async function(e) {
         });
 
         if (response.ok) {
-            window.location.href = "thanks.html";
+            window.location.href = "./htmls/thanks.html";
         } else {
             alert("Something went wrong. Please try again.");
         }
